@@ -519,6 +519,7 @@ void Config::readSectionOptions(ConfigReadContext &s)
         throw ServerConfigReadException(s, "invalid key code in localKeys: " + token);
       }
       m_localKeys.push_back(static_cast<uint32_t>(keyCode));
+      pos = end;
     }
   }
 
